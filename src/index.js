@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'antd/dist/antd.less';
+import './styles/css/tailwind_output.css'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
