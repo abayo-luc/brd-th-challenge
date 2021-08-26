@@ -1,5 +1,6 @@
 import { Button, Steps } from 'antd';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import LRStepFour from './components/SetpFour';
 import LRStepFive from './components/StepFive';
 import LRStepOne from './components/StepOne';
@@ -26,6 +27,7 @@ const steps = [
 ];
 
 const LoanRequest = () => {
+  const history = useHistory();
   const [current, setCurrent] = React.useState(0);
   return (
     <div className="flex flex-col items-center w-full h-full md:mx-0 mx-2">
@@ -73,6 +75,8 @@ const LoanRequest = () => {
             onClick={() => {
               if (current < 4) {
                 setCurrent(current + 1);
+              } else {
+                history.push('/loans');
               }
             }}
           >
